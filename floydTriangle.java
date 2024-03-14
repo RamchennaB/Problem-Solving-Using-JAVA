@@ -5,8 +5,8 @@ public class floydTriangle{
         int n;
         System.out.println("how many rows of floyd triangle you want");
         n=s.nextInt();
-        for(int i=0;i<n;i++){
-            for(int j=0;j<i;j++){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
                 System.out.print("*"+" ");
                 
             }
