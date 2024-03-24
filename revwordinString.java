@@ -8,7 +8,7 @@ class revwordinString{
         String s1[]=s.split(" ");
         for(int i=s1.length-1;i>=0;i--)
         {
-          res += s1[i]+" ";
+          res+=s1[i]+" "
         }
         System.out.println(res);
 }
