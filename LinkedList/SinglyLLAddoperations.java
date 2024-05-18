@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class singlyLinkedList{
     class Node{
         int data;
@@ -70,12 +72,41 @@ class singlyLinkedList{
 }
 public static void main(String []args){
     singlyLinkedList s=new singlyLinkedList();
-    s.addAtBeg(1);
-    s.addAtBeg(2);
-    s.addAtEnd(0);
-    s.addAtEnd(7);
-    s.addAtPos(3,2);
-    s.display();
+  Scanner s1=new Scanner(System.in);
+            while(true){
+                System.out.println("1.add At Beginning");
+                System.out.println("2.add At Pos");
+                System.out.println("3.add at End");
+                System.out.println("4.Display");
+                System.out.println("enter the operation you want to perform");
+                int choice=s1.nextInt();
+                switch(choice){
+                      case 1:{
+                          System.out.println("Enter the data");
+                          int val=s1.nextInt();
+                          s.addAtBeg(val);
+                          break;
+                           }
+                       case 2:{
+                             System.out.println("Enter the data and Position");
+                             int val=s1.nextInt();
+                             int p=s1.nextInt();
+                             s.addAtPos(val,p);
+                             break;
+                            } 
+                        case 3: {
+                              System.out.println("Enter the data");
+                             int val=s1.nextInt();
+                             s.addAtEnd(val);
+                             break;
+                             }
+                             case 4: {
+                                 s.display();
+                             }
+                        default: System.out.println("\nthis is default block");
+                                                  
+        }
+     }
 }
 }
 
